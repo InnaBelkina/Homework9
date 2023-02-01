@@ -8,11 +8,11 @@ Console.WriteLine("Введите число m: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число n: ");
 int n = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine(fAkk(m, n));
+Console.WriteLine(funAkk(m, n));
 
-int fAkk(int m, int n)
+int funAkk(int m, int n)
 {
     if (m == 0) return n + 1;
-    else if (n == 0) return fAkk(m - 1, 1);
-    else return fAkk(m - 1, fAkk(m, n - 1));
+    else if (n == 0) return funAkk(m - 1, 1);
+    else return funAkk(m - 1, funAkk(m, n - 1));
 }
